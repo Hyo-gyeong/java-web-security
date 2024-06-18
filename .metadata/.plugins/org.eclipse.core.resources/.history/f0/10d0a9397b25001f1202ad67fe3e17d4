@@ -1,5 +1,0 @@
-package enums;
-
-public enum FileName {
-	ENCRYPTED_SECRET_KEY("encrypted_secret_key.txt");
-}
