@@ -1,0 +1,1 @@
+A CipherInputStream is composed of an InputStreamand a Cipher so that 

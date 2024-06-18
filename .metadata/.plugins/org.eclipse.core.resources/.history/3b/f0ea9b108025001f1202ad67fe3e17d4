@@ -1,0 +1,24 @@
+package enums;
+
+public enum FilePath {
+	KEY_MANAGER("./src/key_manager/"),
+	HOSPITAL("./src/hospital/"),
+	RESEARCH_CENTER("./src/research_center/"),
+	PK(KEY_MANAGER.getPath()+"privateKeys/private_"),
+	PubK(KEY_MANAGER.getPath()+"publicKeys/public_"),
+	RC_SECRET_MR(RESEARCH_CENTER.getPath()+"secret_medical_record.txt"),
+	HOSPITAL_SECRET_MR(HOSPITAL.getPath()+"secret_medical_record.txt"),
+	HOSPITAL_ENCRYPTED_SK(HOSPITAL.getPath()+"encrypted_secret_key.txt"),
+	HOSPITAL_SECRET_HASHED_MR(HOSPITAL.getPath()+"secret_hashed_medical_record.txt"),
+	;
+	
+	private final String path;
+
+	FilePath(String path) {
+        this.path = path;
+    }
+
+    public String getPath() {
+        return path;
+    }
+}

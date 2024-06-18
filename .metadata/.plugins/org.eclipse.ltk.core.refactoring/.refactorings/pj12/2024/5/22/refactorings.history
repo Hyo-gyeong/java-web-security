@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;InvalidInputException.java&apos; to &apos;final_pj/src/Exceptions&apos;&#x0D;&#x0A;- Original project: &apos;pj12&apos;&#x0D;&#x0A;- Destination element: &apos;final_pj/src/Exceptions&apos;&#x0D;&#x0A;- Original element: &apos;pr01.InvalidInputException.java&apos;" description="Copy compilation unit" destination="=final_pj/src&lt;Exceptions" element1="/src&lt;pr01{InvalidInputException.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1716887452102" units="1" version="1.0"/>
+</session>

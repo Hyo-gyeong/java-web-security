@@ -1,0 +1,31 @@
+package crypto_manager;
+
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+
+import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
+
+import enums.Algorithm;
+
+public class EncryptionUtils {
+	public static byte[] encryptSecretKey(SecretKey sk, PublicKey pk) {
+    	byte[] byteKey = sk.getEncoded();
+        
+        Cipher cipher;
+		try {
+			cipher = Cipher.getInstance(Algorithm.RSA.getAlgorithm());
+		} catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
+			e.printStackTrace();
+		}
+        cipher.init(Cipher.ENCRYPT_MODE, pk);
+        return cipher.doFinal(byteKey);
+    }
+	
+	public static Cipher encrypt(SecretKey sk) throws Exception {
+		Cipher cipher = Cipher.getInstance(Algorithm.AES.getAlgorithm());
+        cipher.init(Cipher.ENCRYPT_MODE, sk);
+        return cipher;
+    }
+}

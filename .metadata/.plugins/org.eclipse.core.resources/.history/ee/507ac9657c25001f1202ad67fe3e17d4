@@ -1,0 +1,15 @@
+package enums;
+
+public enum Message {
+	ENCRYPTED_SECRET_KEY("encrypted_secret_key.txt");
+	
+	private final String message;
+
+	Message(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}

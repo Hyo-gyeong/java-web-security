@@ -1,0 +1,6 @@
+package pr02;
+
+public class Date {
+
+	Date(){}
+}

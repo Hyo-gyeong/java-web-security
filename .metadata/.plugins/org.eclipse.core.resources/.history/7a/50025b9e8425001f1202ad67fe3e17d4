@@ -1,0 +1,35 @@
+// 컴퓨터학과, 20190975, 신효경
+package sign;
+
+import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.Signature;
+import java.security.SignatureException;
+
+public class signMode {
+	public static String bytesToHex(byte[] bytes) {
+		StringBuilder result = new StringBuilder();
+		int i = 0;
+		for (byte b : bytes) {
+			if (i % 20 == 0) {
+				result.append("\n");
+			}
+			result.append(String.format("%02X ", b));
+			i++;
+		}
+		return result.toString();
+	}
+
+	
+	public static byte[] sign(byte[] inputData, PrivateKey privateKey) throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, ClassNotFoundException, IOException {	
+		String signAlgorithm = "SHA1withRSA";
+		Signature sig = Signature.getInstance(signAlgorithm); //Create an instance
+		sig.initSign(privateKey); // Initialize the signer with private key
+		sig.update(inputData); //Add data for signing
+		byte[] signature = sig.sign(); //원래 데이터의 암호화된 해시값 반환
+		
+		return signature;
+	}
+}

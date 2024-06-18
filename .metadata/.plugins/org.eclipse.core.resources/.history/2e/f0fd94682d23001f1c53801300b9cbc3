@@ -1,0 +1,5 @@
+Doctor [doctorId=d9sewwdz1o8, name=Park, specialty=Cardiology, hospital=A Hospital, yearsOfExperience=15]
+------------------------
+Patient [personId=w6axsdgi, name=Kelly, birthDate=1990-05-26, gender=Female, phoneNumber=010-1234-2345, address=123 Main Street, New York, NY 10001, United States]
+------------------------
+MedicalRecord [recordId=ss7qw5ecaax8, personId=w6axsdgi, doctorId=d9sewwdz1o8, date=2003-04-03, labResults=Blood test: Normal, diagnoses=Hypertension, prescription=Amoxicillin 500mg, take twice daily for 7 days, doctorNotes=Patient complains of persistent cough and fever.]

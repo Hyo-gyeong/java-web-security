@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;public.key&apos; to &apos;pj09/src/pr01&apos;&#x0D;&#x0A;- Original project: &apos;pj07&apos;&#x0D;&#x0A;- Destination element: &apos;pj09/src/pr01&apos;&#x0D;&#x0A;- Original element: &apos;public.key&apos;" description="Copy file" destination="=pj09/src&lt;pr01" element1="src/pr01/public.key" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1714806179900" units="0" version="1.0"/>
+</session>

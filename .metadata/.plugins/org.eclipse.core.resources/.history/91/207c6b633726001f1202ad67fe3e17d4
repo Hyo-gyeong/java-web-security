@@ -1,0 +1,37 @@
+// 컴퓨터학과, 20190975, 신효경
+package key_manager;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+
+import enums.Algorithm;
+import enums.FilePath;
+
+public class CreateSaveSymKey {
+	
+	private static void saveKeyToFile(SecretKey key, String fileName) throws IOException {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))) {
+            out.writeObject(key);
+        }
+    }
+	
+	public static SecretKey create() throws NoSuchAlgorithmException, IOException {
+		KeyGenerator keyGen = KeyGenerator.getInstance(Algorithm.SK_ALGORITHM.getAlgorithm());
+		keyGen.init(Integer.parseInt(Algorithm.SK_LENGTH.getAlgorithm()));
+		SecretKey secretKey = keyGen.generateKey();
+		
+		File publicFile = new File(FilePath.SK_DIRECTORY.getPath());
+		if (publicFile.exists()) {
+            publicFile.delete();
+        }
+		saveKeyToFile(secretKey, FilePath.SK.getPath());
+		
+		return secretKey;
+	}
+}

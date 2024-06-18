@@ -1,0 +1,21 @@
+package sign;
+
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.SignatureException;
+
+public class verificationMode {
+	
+	public static boolean verify(PublicKey publicKey, byte[] inputBytes, byte[] signature) throws NoSuchAlgorithmException, InvalidKeyException, SignatureException{	
+		String signAlgorithm = "SHA1withRSA";
+		
+		Signature sig2 = Signature.getInstance(signAlgorithm);
+		sig2.initVerify(publicKey); // Initialize the signer with public key
+		sig2.update(inputBytes); // 입력한 값으로 업데이트 해주고
+		boolean isVerified = sig2.verify(signature); // 파일에서 읽어온 해시값과 비교
+		return isVerified;
+	}
+
+}

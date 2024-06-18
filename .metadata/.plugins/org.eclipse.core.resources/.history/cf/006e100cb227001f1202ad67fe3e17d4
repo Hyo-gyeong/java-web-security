@@ -1,0 +1,57 @@
+package file_manager;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.security.Key;
+
+import javax.crypto.Cipher;
+import javax.crypto.CipherOutputStream;
+import javax.crypto.SecretKey;
+
+import enums.Algorithm;
+
+public class SaveFile {
+	public static void saveHashToFile(byte[] hashValue, String filePath) throws IOException {
+		try (FileOutputStream out = new FileOutputStream(filePath)) {
+            out.write(hashValue);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }	
+	}
+	
+	public static void encryptAndSaveToFile(SecretKey sk, byte[] data, String filePath) throws Exception {
+		Cipher cipher = Cipher.getInstance(Algorithm.AES.getAlgorithm());
+        cipher.init(Cipher.ENCRYPT_MODE, sk);
+        
+        try(FileOutputStream bos = new FileOutputStream(filePath);
+				CipherOutputStream cos = new CipherOutputStream(bos, cipher)){
+			cos.write(data);
+			cos.flush();			
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+    }
+	
+	public static void saveKey(String path, Key key) throws IOException {
+		File publicFile = new File(path);
+		if (!publicFile.exists()) {
+            try {
+            	publicFile.createNewFile();
+            } catch (IOException e) {
+            	throw new IOException();
+            }
+        }	
+		
+		try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(path))) {
+            out.writeObject(key);
+        } catch (IOException e) {
+        	throw new IOException();
+        }
+		
+	}
+}

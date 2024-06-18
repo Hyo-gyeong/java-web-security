@@ -1,0 +1,46 @@
+// 컴퓨터학과, 20190975, 신효경
+package key_manager;
+
+import java.security.NoSuchAlgorithmException;
+
+import enums.Message;
+import exceptions.IdNotExistsException;
+import id_manager.IdGenerator;
+
+
+public class keyManagerMain {
+	private static String hospitalPublicId = null;
+	private static String hospitalPrivateId = null;
+	private static String centerPublicId = null;
+	private static String centerPrivateId = null;
+	
+	private static void initKeyId() {
+		hospitalPublicId = IdGenerator.getRandomId();
+		hospitalPrivateId = IdGenerator.getRandomId();
+		centerPublicId = IdGenerator.getRandomId();
+		centerPrivateId = IdGenerator.getRandomId();
+	}
+	
+	public static void createSaveKeys() throws NoSuchAlgorithmException {
+		initKeyId(); // 병원, 연구소 고유 ID 초기화
+		CreateSaveAsymmetricKeys.initKeyPair();
+		CreateSaveAsymmetricKeys.createKeys(hospitalPublicId, hospitalPrivateId);
+		CreateSaveAsymmetricKeys.createKeys(centerPublicId, centerPrivateId);
+	}
+
+	public static String getHospitalPublicId() {
+		return hospitalPublicId;
+	}
+
+	public static String getHospitalPrivateId() {
+		return hospitalPrivateId;
+	}
+
+	public static String getCenterPublicId() {
+		return centerPublicId;
+	}
+
+	public static String getCenterPrivateId() {
+		return centerPrivateId;
+	}
+}

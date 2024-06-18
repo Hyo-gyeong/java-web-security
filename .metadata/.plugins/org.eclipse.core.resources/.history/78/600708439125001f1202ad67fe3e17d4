@@ -1,0 +1,60 @@
+// 컴퓨터학과, 20190975, 신효경
+package object;
+
+public class Doctor implements Cloneable{
+    private String doctorId;
+    private String name;
+    private String specialty; //전문 분야
+    private String hospital; //소속 병원
+    private int yearsOfExperience; //경력(년)
+
+    public Doctor(String doctorId, String name, String specialty, String hospital, int yearsOfExperience) {
+        this.doctorId = doctorId;
+        this.name = name;
+        this.specialty = specialty;
+        this.hospital = hospital;
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    protected String getDoctorId() {
+        return doctorId;
+    }
+
+    protected String getName() {
+        return name;
+    }
+
+    protected String getSpecialty() {
+        return specialty;
+    }
+
+    protected String getHospital() {
+        return hospital;
+    }
+
+    protected int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+	@Override
+	public String toString() {
+		return "Doctor [doctorId=" + doctorId + ", name=" + name + ", specialty=" + specialty + ", hospital=" + hospital
+				+ ", yearsOfExperience=" + yearsOfExperience + "]";
+	}
+	
+	public static void clone(Doctor doctor, Doctor[] cloneDoctor) throws CloneNotSupportedException {
+		String doctorId = doctor.getDoctorId();
+	    String name = ;
+	    String specialty; //전문 분야
+	    String hospital; //소속 병원
+	    int yearsOfExperience;
+		for (Date date : listOfDate) {
+			int newYear = date.getYear();
+			int newMonth = date.getMonth();
+			int newDate = date.getDate();
+			cloneDate[i] = new Date(newYear, newMonth, newDate);
+			i++;
+		}
+	}
+}
+

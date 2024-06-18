@@ -1,0 +1,32 @@
+// 컴퓨터학과, 20190975, 신효경
+package research_center;
+
+import java.security.NoSuchAlgorithmException;
+
+import exceptions.IdNotExistsException;
+import id_manager.IdGenerator;
+import key_manager.CreateSaveAsymmetricKeys;
+import object.Researcher;
+
+public class ResearchCenter implements Cloneable{
+	static String researcherPublicId = null;
+	static String researcherPrivateId = null;
+	static String researcherId = null;
+	static Researcher researcher = null;
+	
+	public static void createObject() {
+		researcherId = IdGenerator.getRandomId();
+		researcher = new Researcher(researcherId, "Lee", "Computer Science", "B Research Center", 10);
+	}
+	
+	public static void createSaveAsymmetricKeys(String centerPublicId, String centerPrivateId) throws NoSuchAlgorithmException, IdNotExistsException {
+		if (centerPublicId != null) {
+			CreateSaveAsymmetricKeys.createPublicKey(centerPublicId);
+		}if (centerPrivateId != null) {
+			CreateSaveAsymmetricKeys.createPrivateKey(centerPrivateId);
+		}else {
+			throw new IdNotExistsException("연구소의 아이디가 존재하지 않습니다.");
+		}
+	}
+
+}

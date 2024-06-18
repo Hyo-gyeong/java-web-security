@@ -1,0 +1,15 @@
+package enums;
+
+public enum FilePath {
+	PRIVATE_KEY_PATH("./src/key_manager/privateKeys/private_");
+	
+	private final String path;
+
+	FilePath(String path) {
+        this.path = path;
+    }
+
+    public String getPath() {
+        return path;
+    }
+}

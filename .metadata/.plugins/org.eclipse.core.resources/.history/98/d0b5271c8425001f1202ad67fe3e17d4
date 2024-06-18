@@ -1,0 +1,30 @@
+package key_manager;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+
+public class CreateSaveSymmetricKey {
+	
+	private static void saveKeyToFile(SecretKey key, String fileName) throws IOException {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("./src/key_manager/symmetricKey/"+fileName))) {
+            out.writeObject(key);
+        }
+    }
+	
+	public static SecretKey createSymmetricKey() throws NoSuchAlgorithmException, IOException {
+		String algorithm = "AES";
+		int len = 128;
+		
+		KeyGenerator keyGen = KeyGenerator.getInstance(algorithm);
+		keyGen.init(len);
+		SecretKey secretKey = keyGen.generateKey();
+		String saveFile = "skey.txt";
+		saveKeyToFile(secretKey, saveFile);
+		return secretKey;
+	}
+}

@@ -1,0 +1,178 @@
+1717482760134	Delete elements
+1717482764918	Delete elements
+1717482785051	Delete element
+1717482910962	Delete elements
+1717482913591	Delete element
+1717483705487	Delete elements
+1717483708891	Delete elements
+1717486157011	Move compilation unit
+1717486161202	Move compilation unit
+1717487144499	Delete element
+1717487147363	Delete element
+1717487248229	Delete element
+1717487250546	Delete element
+1717488292317	Delete element
+1717488295507	Delete element
+1717489068204	Delete elements
+1717489074101	Delete elements
+1717491935965	Delete element
+1717491939159	Delete element
+1717491944705	Delete elements
+1717491949095	Delete elements
+1717493617792	Delete element
+1717493640471	Rename type 'init_key'
+1717493667182	Rename type 'key_manager_main'
+1717495572997	Rename type 'Patient'
+1717495580684	Rename type 'Person'
+1717495603571	Move compilation unit
+1717495614731	Move compilation unit
+1717496032628	Delete element
+1717496036413	Delete element
+1717496040948	Delete element
+1717496228202	Delete elements
+1717496230451	Delete elements
+1717496518809	Delete element
+1717496520980	Delete element
+1717496522307	Delete element
+1717496523506	Delete element
+1717496900461	Delete elements
+1717497449988	Delete elements
+1717497453460	Delete elements
+1717497457179	Delete elements
+1717499302302	Rename type 'ResearchMain'
+1717499318309	Delete elements
+1717499323944	Delete elements
+1717499327296	Delete element
+1717499330598	Delete elements
+1717501221145	Delete element
+1717503001163	Delete element
+1717503140382	Delete element
+1717503154480	Delete element
+1717503155834	Delete element
+1717503157129	Delete element
+1717503167035	Delete elements
+1717503175432	Delete elements
+1717503179908	Delete element
+1717504286188	Delete element
+1717504287758	Delete element
+1717504376182	Delete element
+1717504377579	Delete element
+1717504451457	Delete elements
+1717504514856	Delete element
+1717504516164	Delete element
+1717504598515	Delete element
+1717504603345	Delete elements
+1717504616280	Delete elements
+1717504622416	Delete elements
+1717504625979	Delete element
+1717504734937	Delete elements
+1717504739069	Delete elements
+1717504742780	Delete elements
+1717504820940	Delete element
+1717504824599	Delete elements
+1717504828118	Delete elements
+1717504831250	Delete elements
+1717505332792	Delete elements
+1717505337587	Delete elements
+1717572454221	Delete element
+1717572455679	Delete element
+1717572851685	Delete element
+1717572853151	Delete element
+1717576301723	Delete element
+1717576303852	Delete element
+1717578073873	Delete elements
+1717578082254	Delete elements
+1717578089424	Delete elements
+1717579493496	Delete element
+1717579498402	Delete elements
+1717579501499	Delete elements
+1717579504303	Delete elements
+1717579863508	Delete element
+1717579875976	Delete element
+1717580021854	Delete element
+1717580026667	Delete element
+1717583277779	Delete elements
+1717583282115	Delete elements
+1717583286470	Delete elements
+1717583288803	Delete element
+1717583514165	Delete elements
+1717583533084	Delete elements
+1717583537911	Delete elements
+1717583541965	Delete element
+1717586058013	Delete elements
+1717586067227	Delete elements
+1717586073137	Delete elements
+1717586340752	Delete elements
+1717586709850	Delete elements
+1717750870770	Delete elements
+1717752193781	Delete elements
+1717752199738	Delete elements
+1717752203200	Delete element
+1717752680327	Rename type 'sign_mode'
+1717755334214	Delete elements
+1717755338857	Delete elements
+1717755343531	Delete elements
+1717759057557	Delete elements
+1717759065350	Delete elements
+1717759074288	Delete elements
+1717759153172	Delete element
+1717761865565	Delete element
+1717763492569	Delete elements
+1717763500702	Delete elements
+1717763504735	Delete element
+1717842751685	Rename local variable 'secretKey'
+1717842763303	Rename local variable 'privateKey'
+1717842778119	Rename local variable 'secreMedicalRecord'
+1717842791498	Rename local variable 'byteMdeicalRecord'
+1717842806620	Rename local variable 'medicalRecord'
+1717842821928	Rename local variable 'secreHashedMedicalRecord'
+1717842830994	Rename local variable 'byteHashedMdeicalRecord'
+1717842844582	Rename local variable 'hospitalPublicKey'
+1717842851432	Rename local variable 'hashedMedicalRecord'
+1717842877473	Rename local variable 'messageDigest'
+1717842935917	Rename local variable 'messageDigest'
+1717842957553	Rename local variable 'keyBytes'
+1717842965539	Rename local variable 'secretKey'
+1717842974018	Rename local variable 'medicalRecord'
+1717842978488	Rename local variable 'hashedMedicalRecord'
+1717842990841	Rename local variable 'centerPublicKey'
+1717843001367	Rename local variable 'fromSecretMedicalRecord'
+1717843005958	Rename local variable 'toSecretMedicalRecord'
+1717843010451	Rename local variable 'fromSecretHashedMedicalRecord'
+1717843014654	Rename local variable 'toSecretHashedMedicalRecord'
+1717843020205	Rename local variable 'fromSecretKeyPath'
+1717843027256	Rename local variable 'toSecretKeyPath'
+1717843056653	Rename local variable 'secretKey'
+1717843062451	Rename local variable 'medicalRecord'
+1717843070742	Rename local variable 'mr'
+1717843075928	Rename local variable 'sk'
+1717843089759	Rename local variable 'file'
+1717843104711	Rename local variable 'saveF'
+1717843127420	Rename local variable 'secretKey'
+1717843136650	Rename local variable 'sk'
+1717843143793	Rename local variable 'SK'
+1717843150921	Rename local variable 'publicKey'
+1717843158554	Rename local variable 'SK'
+1717843163930	Rename local variable 'MR'
+1717843184087	Rename local variable 'secretKey'
+1717843189173	Rename local variable 'privateKey'
+1717843196192	Rename local variable 'sk'
+1717843200030	Rename local variable 'ㅔㅏ'
+1717843203693	Rename local variable 'pkㅏ'
+1717843208927	Rename local variable 'medicalRecord'
+1717843228354	Rename local variable 'hospitalPublicId'
+1717843237632	Rename local variable 'centerPrivateId'
+1717843254591	Rename local variable 'centerPublicId'
+1717843261023	Rename local variable 'hospitalPrivateId'
+1717843643566	Rename local variable 'publicKey'
+1717843660341	Rename local variable 'sig2'
+1717845363041	Delete elements
+1717845373527	Delete elements
+1717845377832	Delete elements
+1717845379935	Delete element
+1717845929828	Rename local variable 'private_path'
+1717846014813	Copy package
+1717846962845	Copy package
+1717846994533	Rename package 'key_manager.symmetricKey'
+1717847374308	Delete elements
+1717847381057	Delete element

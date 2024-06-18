@@ -1,0 +1,23 @@
+package file_manager;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
+import enums.FilePath;
+
+public class SendFile {
+	public static void send(String from, String to) {
+		Path pathFrom = Paths.get(from);
+		Path pathTo = Paths.get(to);
+		try {
+			//파일의 경로를 바꿔서 이동시킴
+			Files.move(fromSecretMR, toSecretMR, StandardCopyOption.REPLACE_EXISTING);
+			Files.move(fromSecretHashedMR, toSecretHashedMR, StandardCopyOption.REPLACE_EXISTING);
+			Files.move(fromSKPath, toSKPath, StandardCopyOption.REPLACE_EXISTING);
+		} catch (Exception e) {
+		   e.printStackTrace();
+		}
+	}
+}

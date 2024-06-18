@@ -1,0 +1,16 @@
+package crypto_manager;
+
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class Hash {
+	public static byte[] SHA1HashMedicalRecord(String mr) throws NoSuchAlgorithmException, IOException {
+		byte[] digest = null;
+		
+		MessageDigest md = MessageDigest.getInstance("SHA-1");
+		md.update(mr.getBytes());
+		digest = md.digest();
+		return digest;
+	}
+}

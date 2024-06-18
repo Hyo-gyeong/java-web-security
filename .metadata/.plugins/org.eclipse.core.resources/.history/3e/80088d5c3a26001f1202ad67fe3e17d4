@@ -1,0 +1,91 @@
+// 컴퓨터학과, 20190975, 신효경
+package hospital;
+
+import java.time.LocalDate;
+
+import id_manager.IdGenerator;
+import object.Doctor;
+import object.MedicalRecord;
+import object.Patient;
+
+
+public class Hospital implements Cloneable{
+	private static Patient patient = null;
+	private static MedicalRecord medicalRecord = null;
+	private static Doctor doctor = null;
+	
+	public Hospital() {
+		String doctorId = IdGenerator.getRandomId();
+		doctor = 
+		String pId = IdGenerator.getRandomId();
+		patient = new Patient(pId, "Kelly", LocalDate.of(1990, 5, 26), "Female",
+							"010-1234-2345", "123 Main Street, New York, NY 10001, United States");
+
+		medicalRecord = new MedicalRecord(IdGenerator.getRandomId(), pId, doctorId, LocalDate.of(2003, 4, 3),
+										"Blood test: Normal", 
+										"Hypertension", 
+										"Amoxicillin 500mg, take twice daily for 7 days", 
+										"Patient complains of persistent cough and fever.");
+	}
+	
+	private void setDoctor() {
+		this.doctor = new Doctor(doctorId, "Park", "Cardiology", "A Hospital", 15);
+	}
+	
+	public Patient getPatient() throws CloneNotSupportedException {
+		Patient tmpPatient = new Patient();
+//		System.out.println(patient.toString());
+		clonePatient(patient, tmpPatient);
+		return tmpPatient;
+	}
+
+	public MedicalRecord getMedicalRecord() {
+		MedicalRecord tmpMR = new MedicalRecord();
+//		System.out.println("mr : " + medicalRecord.toString());
+		cloneMedicalRecord(medicalRecord, tmpMR);
+		return tmpMR;
+	}
+
+	public Doctor getDoctor() throws CloneNotSupportedException {
+		Doctor tmpDoctor = new Doctor();
+		cloneDoctor(doctor, tmpDoctor);
+		System.out.println("clone : "+tmpDoctor.toString());
+		return tmpDoctor;
+	}
+	
+	public static void clonePatient(Patient patient, Patient clonePatient) throws CloneNotSupportedException {
+		String personId = patient.getPersonId();
+		String name = patient.getName();
+		LocalDate birthDate = patient.getBirthDate();
+		String gender = patient.getGender();
+		String phoneNumber = patient.getPhoneNumber();
+		String address = patient.getAddress();
+	    
+		clonePatient = new Patient(personId, name, birthDate, gender, phoneNumber, address);
+	}
+	
+	public static void cloneMedicalRecord(MedicalRecord record, MedicalRecord clonedRecord) {
+	    String recordId = record.getRecordId();
+	    String personId = record.getPersonId();
+	    String doctorId = record.getDoctorId();
+	    LocalDate date = record.getDate();
+	    String labResults = record.getLabResults();
+	    String diagnoses = record.getDiagnoses();
+	    String prescription = record.getPrescription();
+	    String doctorNotes = record.getDoctorNotes();
+	    
+	    clonedRecord = new MedicalRecord(recordId, personId, doctorId, date, labResults, diagnoses, prescription, doctorNotes);
+//	    System.out.println("clone : " +clonedRecord.toString());
+	}
+
+	
+	public static void cloneDoctor(Doctor doctor, Doctor cloneDoctor) throws CloneNotSupportedException {
+		String doctorId = doctor.getDoctorId();
+	    String name = doctor.getName();
+	    String specialty = doctor.getSpecialty();
+	    String hospital = doctor.getHospital();
+	    int yearsOfExperience = doctor.getYearsOfExperience();
+	    
+	    cloneDoctor = new Doctor(doctorId, name, specialty, hospital, yearsOfExperience);
+	}
+}

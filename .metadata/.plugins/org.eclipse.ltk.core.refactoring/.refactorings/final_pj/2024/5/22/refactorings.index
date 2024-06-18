@@ -1,0 +1,35 @@
+1716707423190	Delete element
+1716708430878	Rename compilation unit 'TreatmentHistory.java'
+1716710144766	Rename type 'Patient'
+1716711105566	Rename package 'pr01'
+1716711145819	Rename type 'pr01SaveKey'
+1716712482675	Rename field 'sex'
+1716713788187	Delete element
+1716713810505	Delete element
+1716713899705	Delete element
+1716713902512	Delete element
+1716714050029	Rename package 'key_generator.privateKeys'
+1716714058971	Rename package 'key_generator.publicKeys'
+1716715681195	Move compilation unit
+1716715684107	Move compilation unit
+1716715686744	Move compilation unit
+1716715726916	Move compilation unit
+1716718713178	Rename package 'key_generator'
+1716718748739	Rename type 'CreateKeys'
+1716719147493	Delete element
+1716719336749	Rename type 'ResearchCenter'
+1716720303243	Delete element
+1716720306683	Delete element
+1716720372839	Delete element
+1716720377098	Delete element
+1716721685783	Rename type 'Main'
+1716721696607	Rename type 'hospitalMain'
+1716721716152	Copy compilation unit
+1716721786842	Move compilation unit
+1716721790291	Move compilation unit
+1716721793512	Move compilation unit
+1716721815690	Move compilation unit
+1716887101544	Rename type 'CreateSaveKeys'
+1716887478350	Rename type 'InvalidInputException'
+1716887533664	Rename package 'Exceptions'
+1716889268392	Rename type 'RIdNotExists'

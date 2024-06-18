@@ -1,0 +1,62 @@
+package exceptions;
+
+import javax.crypto.*;
+import javax.crypto.spec.SecretKeySpec;
+import java.security.*;
+
+public class test {
+	
+	public static String bytesToHex(byte[] bytes) { //test
+		StringBuilder result = new StringBuilder();
+		int i = 0;
+		for (byte b : bytes) {
+			if (i != 0 && i % 20 == 0) {
+				result.append("\n");
+			}
+			result.append(String.format("%02X ", b));
+			i++;
+		}
+		return result.toString();
+	}
+
+    public static void main(String[] args) throws Exception {
+        // 키 생성
+        KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+        keyGen.init(128);
+        SecretKey secretKey = keyGen.generateKey();
+        
+        KeyPair keypair;
+        PrivateKey privatekey;
+        PublicKey publickey;
+        KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("RSA");
+		keyPairGen.initialize(1024);
+		
+		keypair = keyPairGen.generateKeyPair();
+		publickey = keypair.getPublic();
+		privatekey = keypair.getPrivate();
+		
+        byte[] cipherText = encrypt(secretKey, publickey);
+
+        // 복호화
+        String decryptedText = decrypt(cipherText, privatekey);
+
+        System.out.println("Original: " + bytesToHex(secretKey.getEncoded()));
+        System.out.println("Encrypted: " + new String(cipherText));
+        System.out.println("Decrypted: " + decryptedText);
+    }
+
+    // 암호화 메서드
+    public static byte[] encrypt(SecretKey sk, PublicKey pk) throws Exception {
+        Cipher cipher = Cipher.getInstance(pk.getAlgorithm());
+        cipher.init(Cipher.ENCRYPT_MODE, pk);
+        return cipher.doFinal(sk.getEncoded());
+    }
+
+    // 복호화 메서드
+    public static String decrypt(byte[] cipherText, PrivateKey pk) throws Exception {
+        Cipher cipher = Cipher.getInstance(pk.getAlgorithm());
+        cipher.init(Cipher.DECRYPT_MODE, pk);
+        byte[] decryptedBytes = cipher.doFinal(cipherText);
+        return new String(decryptedBytes);
+    }
+}

@@ -1,0 +1,17 @@
+package enums;
+
+public enum Message {
+	SYMMETRIC_KEY_GENERATED("대칭키를 생성했습니다."),
+	DIGITAL_ENVELOP_CREATED("전자봉투를 생성했습니다."),
+	TRANSMISSION_CHOICE("전자봉투를 연구소로 보내시겠습니까? y/n (나가기 q) : ");
+	
+	private final String message;
+
+	Message(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}

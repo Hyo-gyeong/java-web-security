@@ -1,0 +1,15 @@
+package enums;
+
+public enum FileName {
+	ENCRYPTED_SECRET_KEY("encrypted_secret_key.txt");
+	
+	private final String name;
+
+	FileName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
