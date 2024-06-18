@@ -1,4 +1,3 @@
-// 컴퓨터학과, 20190975, 신효경
 package exceptions;
 
 public class IdNotExistsException  extends Exception {

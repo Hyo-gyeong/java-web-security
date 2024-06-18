@@ -1,4 +1,3 @@
-// 컴퓨터학과, 20190975, 신효경
 package hospital;
 
 import java.security.PrivateKey;
